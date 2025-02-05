@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: "ManropeMedium";
+    src: url(../Assets/fonts/Manrope/static/Manrope-Medium.ttf);
+}
+@font-face{
+    font-family: "ManropeReg";
+    src: url(../Assets/fonts/Manrope/static/Manrope-Regular.ttf);
+}
+@font-face{
+    font-family: "ManropeBold";
+    src: url(../Assets/fonts/Manrope/static/Manrope-Bold.ttf);
+}
+body{
+    background-color: #fff;
+    font-family: "ManropeReg", Arial, Helvetica, sans-serif;
+}
+header{
+    width: 100%;
+    height: 114px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+header .logo img{
+    width: 103px;
+}
+nav{
+    width: 100%;
+    height: 0vh;
+    background-color: purple;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    overflow: hidden;
+    transition: .6s all linear;
+}
+.active-menu{
+    height: 100vh;
+    transition: .6s all linear;
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    transition: .3s all linear;
+}
+nav ul li a:hover{
+    color: #ee7c0e;
+}
+nav ul li a.subscribe{
+    padding: 10px 20px;
+    background-color: #ee7c0e;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    font-family: "ManropeBold";
+    transition: .3s all linear;
+}
+nav ul li a.subscribe:hover{
+    color: #ffffff;
+    border-color: #ee7c0e;
+    background-color: transparent;
+}
+nav ul li{
+    list-style: none;
+    font-size: 18.5px;
+}
+nav ul li:first-child{
+    padding-top: 40px;
+}
+nav ul li .subscribe{
+    color: #000; 
+}
+main{
+    padding: 0 20px;
+}
+img.post{
+    width: 100%;
+    height: 177px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+img.first_post_img{
+    border-radius: 0;
+}
+img.user-avatar{
+    width: 62px;
+    height: 62px;
+    object-fit: cover;
+}
+.first_article img.post{
+    height: 237px;
+}
+h2{
+    margin: 20px 0 18px;
+    font-size: 2.06rem;
+    font-family: "ManropeMedium";
+}
+p{
+    margin-bottom: 20px;
+    font-size: 1.12rem;
+    color: #777777;
+    line-height: 1.5em;
+}
+.person_info{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.person_info .person_info_content h4{
+    letter-spacing: .5px;
+    font-size: .9rem;
+    font-family: "ManropeBold";
+}
+.person_info .person_info_content p{
+    margin: 0;
+    font-size: .95rem;
+}
+.first_article{
+    margin-bottom: 49px;
+}
+.first_post, .second_post, .third_post{
+    margin-bottom: 49px;
+}
+footer p{
+    font-size: 15.5px;
+    margin-top: 18px;
+}
+
+@media screen and (min-width: 768px){
+    .btn_menu{
+        display: none;
+    }
+    nav{
+        all: initial;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 25px;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: #777777;
+        font-family: "ManropeMedium", Arial, Helvetica, sans-serif;
+        font-size: 18px;
+    }
+    nav ul li{
+        list-style: none;
+        font-size: 18.5px;
+    }
+    nav ul li:first-child{
+        padding-top: 0;
+    }
+    nav ul li a.subscribe{
+        padding: 10px 20px;
+        background-color: #ee7c0e;
+        border-radius: 8px;
+        border: 2px solid transparent;
+        font-family: "ManropeBold";
+        transition: .3s all linear;
+    }
+    nav ul li a.subscribe:hover{
+        color: #ee7c0e;
+        border-color: #ee7c0e;
+        background-color: rgb(255, 255, 255);
+    }
+    nav ul li .subscribe{
+        color: #000;
+    }
+    header{
+        padding: 0 40px;
+        height: 145px;
+    }
+    main{
+        padding: 0 40px;
+    }
+    img.second_post_img{
+        border-radius: 0;
+    }
+    .first_article img.post{
+        height: 265px;
+    }
+    h2{
+        font-size: 2.34rem;
+    }
+    p{
+        font-size: 1.26rem;
+    }
+    .person_info .person_info_content h4{
+        font-size: 1rem;
+    }
+    .person_info .person_info_content p{
+        font-size: 1.06rem;
+    }
+    img.post{
+        height: 203px;
+    }
+    footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 24px;
+    }
+    footer p{
+        font-size: 17.8px;
+    }
+}
+@media screen and (min-width: 992px){
+    main, header{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 80px;
+    }
+    .first_article img.post{
+        border-radius: 6px;
+    }
+    .first_article{
+        margin-bottom: 80px;
+        display: grid;
+        grid-template-columns: 1.15fr 2fr;
+        align-items: center;
+        column-gap: 40px;
+    }
+    h2.first_header{
+        margin-top: 0;
+    }
+    h2{
+        font-size: 1.87rem;
+    }
+    section.container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 39px;
+    }
+    .post_content{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr .9fr;
+    }
+} 
+@media screen and (min-width: 1200px){
+    main, header{
+        padding: 0 80px;
+    }
+    .first_article{
+        column-gap: 55px;
+    }
+    h2{
+        font-size: 2.18rem;
+    }
+    p{
+        font-size: 1.18rem;
+    }
+    section.container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 39px;
+    }
+    p.first_paragraf{
+        width: 626px;
+    }
+    .person_info.jessica{
+        margin-top: 0px;
+    }
+    .person_info{
+        margin-top: -40px;
+    }
+    footer{
+        padding-bottom: 0;
+    }
+}
